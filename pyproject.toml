@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "python-example-package-lth"
+version = "0.1.0"
+description = "An example Python package"
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/letuanhai/python-example-package-lth"
+repository = "https://github.com/letuanhai/python-example-package-lth"
+authors = ["letuanhai <letuanhai@live.com>"]
+keywords = ["example"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
