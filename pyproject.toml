@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-example-package-lth"
+name = "example_package_lth"
 version = "0.1.0"
 description = "An example Python package"
 license = "MIT"
