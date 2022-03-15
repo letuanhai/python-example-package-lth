@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "example_package_lth"
+name = "example-package-lth"
 version = "0.1.0"
 description = "An example Python package"
 license = "MIT"
@@ -8,6 +8,9 @@ homepage = "https://github.com/letuanhai/python-example-package-lth"
 repository = "https://github.com/letuanhai/python-example-package-lth"
 authors = ["letuanhai <letuanhai@live.com>"]
 keywords = ["example"]
+
+[tool.poetry.scripts]
+example-package-lth = "example_package_lth.console:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
