@@ -9,3 +9,8 @@ Topics covered:
 - Manage dependency with *Poetry*
 - Command-line interfaces with *click*
 - Consume a REST API with *requests*
+- Unit testing with *pytest*
+- Code coverage with *Coverage.py*
+- Test automation with *Nox*
+- Mocking with *pytest-mock*
+- End-to-end testing
