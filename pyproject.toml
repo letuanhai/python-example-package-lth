@@ -36,6 +36,7 @@ pytype = {version = "^2022.4.6", python = "3.9"}
 typeguard = "^2.13.3"
 flake8-annotations = "^2.8.0"
 flake8-docstrings = "^1.6.0"
+darglint = "^1.8.1"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
