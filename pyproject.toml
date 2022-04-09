@@ -30,6 +30,7 @@ flake8-import-order = "^0.18.1"
 safety = "^1.10.3"
 coverage = {extras = ["toml"], version = "^6.3.2"}
 mypy = "^0.942"
+pytype = {version = "^2022.4.6", python = "3.9"}
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
