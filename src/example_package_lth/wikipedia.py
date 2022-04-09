@@ -1,6 +1,3 @@
-from email import message
-from pydoc import cli
-from urllib.request import Request
 import requests
 import click
 

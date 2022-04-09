@@ -1,4 +1,3 @@
-from unittest import result
 import click.testing
 import pytest
 import requests
@@ -16,7 +15,7 @@ def mock_wikipedia_random_page(mocker):
     return mocker.patch("example_package_lth.wikipedia.random_page")
 
 
-def test_main_succeeds(runner, mock_requests_get):
+def test_main_succeeds(runner):
     result = runner.invoke(console.main)
     assert result.exit_code == 0
 
