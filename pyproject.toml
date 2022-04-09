@@ -34,6 +34,7 @@ coverage = {extras = ["toml"], version = "^6.3.2"}
 mypy = "^0.942"
 pytype = {version = "^2022.4.6", python = "3.9"}
 typeguard = "^2.13.3"
+flake8-annotations = "^2.8.0"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
