@@ -14,3 +14,11 @@ Topics covered:
 - Test automation with *Nox*
 - Mocking with *pytest-mock*
 - End-to-end testing
+- Linting with *flake8*
+- Code formatting with *black*
+- Checking import with *flake8-import-order*
+- Finding more bugs with *flake8-bugbear*
+- Identifying security issues with *bandit*
+- Finding security vulnerabilities in dependencies with *Safety*
+- Managing dependencies in *Nox* sessions with *Poetry*
+- Managing Git hooks with *pre-commit*
