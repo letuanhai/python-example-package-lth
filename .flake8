@@ -1,9 +1,10 @@
 [flake8]
-select = BLK,C,E,F,W,I,B,B9,S,ANN
+select = BLK,C,E,F,W,I,B,B9,S,ANN,D
 max-complexity = 10
 ignore = E203,W503,E501,ANN401
 max-line-length = 80
 application-import-names = example_package_lth,tests
+docstring-convention = google
 import-order-style = google
 per-file-ignores =
     tests/*:S101
