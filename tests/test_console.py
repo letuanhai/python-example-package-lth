@@ -1,54 +1,62 @@
+from unittest.mock import Mock
+
 import click.testing
+from click.testing import CliRunner
 import pytest
+from pytest_mock import MockFixture
 import requests
 
 from example_package_lth import console
 
 
 @pytest.fixture
-def runner():
+def runner() -> CliRunner:
     return click.testing.CliRunner()
 
 
 @pytest.fixture
-def mock_wikipedia_random_page(mocker):
+def mock_wikipedia_random_page(mocker: MockFixture) -> Mock:
     return mocker.patch("example_package_lth.wikipedia.random_page")
 
 
-def test_main_succeeds(runner):
+def test_main_succeeds(runner: CliRunner) -> None:
     result = runner.invoke(console.main)
     assert result.exit_code == 0
 
 
-def test_main_print_title(runner, mock_requests_get):
-    result = runner.invoke(console.main)
+def test_main_print_title(runner: CliRunner, mock_requests_get: Mock) -> None:
+    runner.invoke(console.main)
     assert mock_requests_get.called
 
 
-def test_main_use_en_wikipedia_org(runner, mock_requests_get):
-    result = runner.invoke(console.main)
+def test_main_use_en_wikipedia_org(runner: CliRunner, mock_requests_get: Mock) -> None:
+    runner.invoke(console.main)
     args, _ = mock_requests_get.call_args
     assert "en.wikipedia.org" in args[0]
 
 
-def test_main_fail_on_request_error(runner, mock_requests_get):
+def test_main_fail_on_request_error(runner: CliRunner, mock_requests_get: Mock) -> None:
     mock_requests_get.side_effect = Exception("Failed")
     result = runner.invoke(console.main)
     assert result.exit_code == 1
 
 
-def test_main_prints_message_on_request_error(runner, mock_requests_get):
+def test_main_prints_message_on_request_error(
+    runner: CliRunner, mock_requests_get: Mock
+) -> None:
     mock_requests_get.side_effect = requests.RequestException
     result = runner.invoke(console.main)
     assert "Error" in result.output
 
 
-def test_main_uses_specified_language(runner, mock_wikipedia_random_page):
+def test_main_uses_specified_language(
+    runner: CliRunner, mock_wikipedia_random_page: Mock
+) -> None:
     runner.invoke(console.main, ["--language=pl"])
     mock_wikipedia_random_page.assert_called_with(language="pl")
 
 
 @pytest.mark.e2e
-def test_main_succeeds_in_prod_env(runner):
+def test_main_succeeds_in_prod_env(runner: CliRunner) -> None:
     result = runner.invoke(console.main)
     assert result.exit_code == 0
