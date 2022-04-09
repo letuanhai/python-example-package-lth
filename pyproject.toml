@@ -39,6 +39,7 @@ flake8-docstrings = "^1.6.0"
 darglint = "^1.8.1"
 xdoctest = "^1.0.0"
 Sphinx = "^4.5.0"
+sphinx-autodoc-typehints = "^1.17.0"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
