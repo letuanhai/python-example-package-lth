@@ -6,6 +6,8 @@ nox.options.sessions = "lint", "tests", "safety", "mypy", "pytype"
 
 locations = "src", "tests", "noxfile.py"
 
+package = "example_package_lth"
+
 
 def install_with_constraints(session, *args, **kwargs):
     with tempfile.NamedTemporaryFile() as requirements:
@@ -82,3 +84,11 @@ def pytype(session):
     args = session.posargs or ["--disable=import-error", *locations]
     install_with_constraints(session, "pytype")
     session.run("pytype", *args)
+
+
+@nox.session(python=["3.9", "3.10"])
+def typeguard(session):
+    args = session.posargs or ["-m", "not e2e"]
+    session.run("poetry", "install", "--no-dev", external=True)
+    install_with_constraints(session, "pytest", "pytest-mock", "typeguard")
+    session.run("pytest", f"--typeguard-packages={package}", *args)
