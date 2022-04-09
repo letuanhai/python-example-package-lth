@@ -1,5 +1,5 @@
 [flake8]
-select = BLK,C,E,F,W,I,B,B9,S,ANN,D
+select = BLK,C,E,F,W,I,B,B9,S,ANN,D,DAR
 max-complexity = 10
 ignore = E203,W503,E501,ANN401
 max-line-length = 80
