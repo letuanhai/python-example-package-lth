@@ -1,5 +1,7 @@
 [flake8]
-select = BLK,C,E,F,W
+select = BLK,C,E,F,W,I
 max-complexity = 10
 ignore = E203,W503
 max-line-length = 88
+application-import-names = example_package_lth,tests
+import-order-style = google
