@@ -1,6 +1,7 @@
 # Python Example Package
 [![Tests](https://github.com/letuanhai/python-example-package-lth/workflows/Tests/badge.svg)](https://github.com/letuanhai/python-example-package-lth/actions?workflow=Tests)
 [![Codecov](https://codecov.io/gh/letuanhai/python-example-package-lth/branch/master/graph/badge.svg)](https://codecov.io/gh/letuanhai/python-example-package-lth)
+[![PyPI](https://img.shields.io/pypi/v/hypermodern-python.svg)](https://pypi.org/project/letuanhai/python-example-package-lth/)
 
 Clone of cjolowicz/hypermodern-python
 
