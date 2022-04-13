@@ -1,4 +1,5 @@
 # Python Example Package
+[![Tests](https://github.com/letuanhai/python-example-package-lth/workflows/Tests/badge.svg)](https://github.com/letuanhai/python-example-package-lth/actions?workflow=Tests)
 Clone of cjolowicz/hypermodern-python
 
 Making an example package using *modern* Python toolchain.
